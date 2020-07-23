@@ -18,4 +18,17 @@ public class GuessNumberGameTest {
         //then
         Assertions.assertEquals("4A0B", actual);
     }
+
+    @Test
+    public void should_return_2A2B_when_guess_1243_given_1234() {
+        //given
+        String answer = "1243";
+        GuessNumberGame guessNumberGame = new GuessNumberGame(randomNums);
+
+        //when
+        String actual = guessNumberGame.guess(answer);
+
+        //then
+        Assertions.assertEquals("2A2B", actual);
+    }
 }
