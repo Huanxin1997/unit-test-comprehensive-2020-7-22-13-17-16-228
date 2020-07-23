@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class GuessNumberGameTest {
     String randomNums = "1234";
+//    GeneratorUtil generatorUtil = new Mock(GeneratorUtil.class);
 
     @Test
     public void should_return_4A0B_when_guess_1234_given_1234() {
@@ -43,5 +44,18 @@ public class GuessNumberGameTest {
 
         //then
         Assertions.assertEquals("2A1B", actual);
+    }
+
+    @Test
+    public void should_return_0A4B_when_guess_4321_given_1234() {
+        //given
+        String answer = "4321";
+        GuessNumberGame guessNumberGame = new GuessNumberGame(randomNums);
+
+        //when
+        String actual = guessNumberGame.guess(answer);
+
+        //then
+        Assertions.assertEquals("0A4B", actual);
     }
 }
