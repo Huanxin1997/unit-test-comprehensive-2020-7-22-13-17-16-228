@@ -84,4 +84,17 @@ public class GuessNumberGameTest {
         //then
         Assertions.assertEquals("0A0B", actual);
     }
+
+    @Test
+    public void should_return_wrong_when_guess_more_than_6_times() {
+        //given
+        String answer = "6789";
+        GuessNumberGame guessNumberGame = new GuessNumberGame(randomNums);
+
+        //when
+        String actual = guessNumberGame.guess(answer);
+
+        //then
+        Assertions.assertEquals("Wrong Input，Input again", actual);
+    }
 }
