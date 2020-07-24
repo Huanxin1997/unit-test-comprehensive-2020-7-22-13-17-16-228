@@ -48,4 +48,18 @@ public class GuessNumberProcessTest {
         assertEquals(isContinueGame, true);
     }
 
+    @Test
+    void should_return_false_when_process_given_7_and_2A1B() {
+        // given
+        ProcessController controller = new ProcessController();
+        int times = 7;
+        String result = "2A1B";
+
+        // when
+        Boolean isContinueGame = controller.controlProcess(times, result);
+
+        // then
+        assertEquals(isContinueGame, false);
+    }
+
 }
