@@ -34,4 +34,18 @@ public class GuessNumberProcessTest {
         assertEquals(isContinueGame, true);
     }
 
+    @Test
+    void should_return_true_when_process_given_3_and_3A1B() {
+        // given
+        ProcessController controller = new ProcessController();
+        int times = 3;
+        String result = "3A1B";
+
+        // when
+        Boolean isContinueGame = controller.controlProcess(times, result);
+
+        // then
+        assertEquals(isContinueGame, true);
+    }
+
 }
