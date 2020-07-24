@@ -2,7 +2,8 @@ package example;
 
 public class GeneratorUtil {
     public String generateRandomNumbers() {
-        return null;
+        int number = (int)(Math.random()*9+1)*1000;
+        return String.valueOf(number);
     }
 
     String generateOutputResult(String guessAnswer, String answer) {
