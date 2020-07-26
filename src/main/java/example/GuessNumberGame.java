@@ -1,8 +1,7 @@
 package example;
 
 public class GuessNumberGame {
-    private String answer;
-    private int guessTimes = 0;
+    private final String answer;
 
     public GuessNumberGame(String answer) {
         this.answer = answer;
@@ -17,12 +16,7 @@ public class GuessNumberGame {
 
     String generateOutputResult(String guessAnswer, String answer) {
         GeneratorUtil util = new GeneratorUtil();
-        String result = util.generateOutputResult(guessAnswer, answer);
-        return result;
+        return util.generateOutputResult(guessAnswer, answer);
     }
 
-    Boolean calculateTimes() {
-        guessTimes ++;
-        return guessTimes > 6;
-    }
 }
