@@ -1,11 +1,11 @@
 package example.util.imp;
 
-import example.util.Valid;
+import example.util.Validator;
 
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class ValidImpl implements Valid {
+public class ValidatorImpl implements Validator {
     @Override
     public boolean isValid(String guessNumber) {
         if (guessNumber.length() != 4) {

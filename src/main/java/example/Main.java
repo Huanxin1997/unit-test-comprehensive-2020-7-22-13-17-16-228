@@ -1,9 +1,9 @@
 package example;
 
 
-public class Process {
+public class Main {
     public static void main(String[] args) {
-        GuessGame guessName = new GuessGame();
+        GuessNumberGame guessName = new GuessNumberGame();
         guessName.startGame();
     }
 }

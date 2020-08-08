@@ -1,5 +1,5 @@
 package example.util;
 
-public interface Valid {
+public interface Validator {
     boolean isValid(String guess);
 }

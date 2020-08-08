@@ -2,20 +2,20 @@ package example;
 
 import example.util.GenerateUtil;
 import example.util.imp.GenerateUtilImpl;
-import example.util.Valid;
-import example.util.imp.ValidImpl;
+import example.util.Validator;
+import example.util.imp.ValidatorImpl;
 
 import java.util.Scanner;
 
-public class GuessGame {
+public class GuessNumberGame {
 
     private final GenerateUtil generateUtil = new GenerateUtilImpl();
-    private final Valid valid = new ValidImpl();
+    private final Validator validator = new ValidatorImpl();
 
     String NOT_VALID = "Wrong Input，Input again";
     String RIGHT_ANSWER = "Congraduations!You are right";
 
-    public String guess(String guessAnswer, String generateNum) {
+    public String getGuessResult(String guessAnswer, String generateNum) {
         int errorPositionCount = 0;
         int rightPositionCount = 0;
         for (int i = 0; i < guessAnswer.length(); i++) {
@@ -38,9 +38,9 @@ public class GuessGame {
         int remainingTimes = 6;
         while (remainingTimes > 0) {
             String guessNum = sc.nextLine();
-            if (valid.isValid(guessNum)) {
-                System.out.println(this.guess(guessNum, randomNum));
-                if (this.guess(guessNum, randomNum).equals("4A0B")) {
+            if (validator.isValid(guessNum)) {
+                System.out.println(this.getGuessResult(guessNum, randomNum));
+                if (this.getGuessResult(guessNum, randomNum).equals("4A0B")) {
                     System.out.println(RIGHT_ANSWER);
                     sc.close();
                 }
